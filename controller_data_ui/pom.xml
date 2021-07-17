@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>in.career</groupId>
-	<artifactId>Architecture_springwebMVC-1</artifactId>
+	<artifactId>controller_data_ui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Architecture_springwebMVC-1</name>
+	<name>controller_data_ui</name>
 	<description>JSP-to-Controller sb project</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -41,10 +41,7 @@
     		<groupId>javax.servlet</groupId>
     		<artifactId>jstl</artifactId>
    		</dependency>
-		
 	</dependencies>
-	
-	
 
 	<build>
 		<plugins>
