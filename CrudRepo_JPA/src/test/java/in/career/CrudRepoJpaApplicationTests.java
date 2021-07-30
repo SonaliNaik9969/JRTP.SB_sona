@@ -17,7 +17,7 @@ class CrudRepoJpaApplicationTests {
 	@Test
 	public void saveTeacher()
 	{
-		Teacher t1 = new Teacher(4L, "Mayuri", "mayuri@gmail.com");
+		Teacher t1 = new Teacher(2L, "Sonali", "sonanaik@gmail.com");
 		td.save(t1);
 		System.out.println("Saved successfully!!!");
 	}

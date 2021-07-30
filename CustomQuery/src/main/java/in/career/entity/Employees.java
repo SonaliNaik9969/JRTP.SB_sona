@@ -4,13 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Teacher {
-	@Id
-	private Long id;
+public class Employees {
+	@Id 
+	private Integer id;
 	private String name;
 	private String email;
 	
-	public Teacher() {
+	public Employees() {
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -18,23 +18,23 @@ public class Teacher {
 
 	@Override
 	public String toString() {
-		return "Teacher [id=" + id + ", name=" + name + ", email=" + email + "]";
+		return "Employees [id=" + id + ", name=" + name + ", email=" + email + "]";
 	}
 
 
 
-	public Teacher(Long id, String name, String email) {
+	public Employees(Integer id, String name, String email) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
