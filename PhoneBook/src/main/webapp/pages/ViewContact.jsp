@@ -5,29 +5,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Employees Details</title>
+<title>Contact Details</title>
 </head>
 <body>
-<h1> Employees Details </h1>
-<table border="1">
+<h1>Contact Details</h1>
+
+<table border="2" >
 <thead>
 <th>id</th>
 <th>name</th>
 <th>email</th>
-<th>department</th>
-<th>salary</th>
+<th>mobile</th>
 <th>Action</th>
 </thead>
 
 <tbody>
-<j:forEach items="${allEmployee }" var="emp">
+<j:forEach items="${allContact }" var="cont">
 <tr>
-<td>${emp.id }</td>
-<td>${emp.name }</td>
-<td>${emp.email }</td>
-<td>${emp.department }</td>
-<td>${emp.salary }</td>
-<td> Edit | <a href="/delete/${emp.id}"> Delete </a> </td>
+<td>${cont.id }</td>
+<td>${cont.name }</td>
+<td>${cont.email }</td>
+<td>${cont.mobile }</td>
+<td> Edit |<a href="/delete/${cont.id}"> Delete </a> </td>
 </tr>
 </j:forEach>
 </tbody>

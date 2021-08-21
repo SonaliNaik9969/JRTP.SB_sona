@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Contact Page</title>
-
+<title>Success Page</title>
 </head>
 <body>
-
+<h1>Contact Saved Successfully!!!</h1>
 </body>
 </html>

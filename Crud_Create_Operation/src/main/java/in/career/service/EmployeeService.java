@@ -24,4 +24,9 @@ public class EmployeeService {
 		return allEmployee;
 	}
 
+	public void deleteEmployeeByID(Long id) {
+		empRepo.deleteById(id);
+		
+	}
+
 }
