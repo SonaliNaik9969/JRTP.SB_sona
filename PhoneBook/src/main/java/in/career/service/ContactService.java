@@ -1,6 +1,7 @@
 package in.career.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,10 @@ public class ContactService {
 		
 	}
 		
+	public Contact findContactById(Integer id) {
+		Optional<Contact> findContById = ContRepo.findById(id);
+		Contact con = findContById.get();
+		return con;
 	}
 
-
+}

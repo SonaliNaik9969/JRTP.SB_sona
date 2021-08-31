@@ -27,10 +27,12 @@
 <td>${emp.email }</td>
 <td>${emp.department }</td>
 <td>${emp.salary }</td>
-<td> Edit | <a href="/delete/${emp.id}"> Delete </a> </td>
+<td> <a href="/update/${emp.id}"> Edit </a> | <a href="/delete/${emp.id}"> Delete </a> </td>
 </tr>
 </j:forEach>
 </tbody>
 </table>
+<br>
+<a href="register"> Employee Registration Form </a> 
 </body>
 </html>

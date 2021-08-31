@@ -19,20 +19,20 @@ public class ContactController {
 		return "Index";
 	}
 	@GetMapping("/register")
-	public ModelAndView NewContact()
+	public ModelAndView AddContactDetail()
 	{
 		ModelAndView mav = new ModelAndView();
 		Contact cont = new Contact();
-		mav.addObject("Contact", cont);
+		mav.addObject("cont", cont);
 		mav.setViewName("AddContact");
 		return mav;
 	}
-	@GetMapping("/save")
+	@GetMapping(value = {"/save","/update/save"})
 	public String saveContact(Contact cont)
 	{
 		contService.saveContact(cont);
 		System.out.println(cont);
-		return "Success";
+		return "redirect:/allContacts";
 	}
 	@GetMapping("/delete/{id}")
 	public String deleteContact(@PathVariable("id")Integer id)
@@ -49,6 +49,15 @@ public class ContactController {
 		mav.addObject("allContact", allContact);
 		mav.setViewName("ViewContact");
 		System.out.println(allContact);
+		return mav;
+	}
+	@GetMapping("/update/{id}")
+	public ModelAndView updateContactDetail(@PathVariable("id") Integer id)
+	{
+		ModelAndView mav = new ModelAndView();
+		Contact cont = contService.findContactById(id);
+		mav.addObject("cont", cont);
+		mav.setViewName("AddContact");
 		return mav;
 	}
 	@Autowired

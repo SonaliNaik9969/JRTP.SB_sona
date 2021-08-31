@@ -1,6 +1,7 @@
 package in.career.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,12 @@ public class EmployeeService {
 	public void deleteEmployeeByID(Long id) {
 		empRepo.deleteById(id);
 		
+	}
+
+	public Employee findEmployeeById(Long id) {
+		Optional<Employee> findById = empRepo.findById(id);
+		Employee emp = findById.get();
+		return emp;
 	}
 
 }

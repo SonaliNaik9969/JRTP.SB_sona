@@ -44,7 +44,16 @@ public class EmployeeController {
 		System.out.println(allEmployee);
 		return mav;
 	}
-	@GetMapping("/save")
+	@GetMapping("/update/{id}")
+	public ModelAndView updateEmployee(@PathVariable("id") Long id)
+	{
+		ModelAndView mav = new ModelAndView();
+		Employee emp = empService.findEmployeeById(id);
+		mav.addObject("emp", emp);
+		mav.setViewName("EmployeeRegestration");
+		return mav;
+	}
+	@GetMapping(value = {"/save","/update/save"})
 	public String saveEmployee(Employee emp)
 	{
 		empService.saveEmployee(emp);

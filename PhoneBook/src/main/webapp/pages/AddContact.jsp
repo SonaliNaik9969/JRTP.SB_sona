@@ -9,7 +9,7 @@
 </head>
 <body bgcolor="#ffe0b3">
 <h1><center> Add New Contact </center></h1>
-<f:form action="save" modelAttribute="Contact" method="get" >
+<f:form action="save" modelAttribute="cont" method="get" >
 <table align="center" border="1">
 
 <tr>

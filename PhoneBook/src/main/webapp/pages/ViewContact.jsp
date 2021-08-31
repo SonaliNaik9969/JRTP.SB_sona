@@ -10,7 +10,7 @@
 <body>
 <h1>Contact Details</h1>
 
-<table border="2" >
+<table border="1" >
 <thead>
 <th>id</th>
 <th>name</th>
@@ -26,10 +26,12 @@
 <td>${cont.name }</td>
 <td>${cont.email }</td>
 <td>${cont.mobile }</td>
-<td> Edit |<a href="/delete/${cont.id}"> Delete </a> </td>
+<td> <a href="/update/${cont.id}"> Edit </a>|<a href="/delete/${cont.id}"> Delete </a> </td>
 </tr>
 </j:forEach>
 </tbody>
 </table>
+<br>
+<a href="/register"> Add New Contact </a>
 </body>
 </html>
